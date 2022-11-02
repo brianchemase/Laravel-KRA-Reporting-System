@@ -20,4 +20,6 @@ Route::get('/', function () {
 
 Route::get('/dash', [ServiceController::class, 'index']);
 Route::get('/registerservice', [ServiceController::class, 'service']);
+Route::post('/storeservice', [ServiceController::class, 'storeservice']);
 Route::get('/complainstab', [ServiceController::class, 'complaints']);
+Route::post('/storecomplain', [ServiceController::class, 'storecomplain']);

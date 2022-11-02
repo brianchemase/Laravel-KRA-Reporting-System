@@ -38,6 +38,11 @@ class ServiceController extends Controller
 
         return view('agents.register', compact('username','dept','station'));
     }
+    public function storeservice(Request $request)
+    {
+         $input = $request->all();
+        return $input;
+    }
 
     public function complaints()
     {
@@ -48,5 +53,10 @@ class ServiceController extends Controller
 
 
         return view('agents.complains', compact('username','dept','station'));
+    }
+    public function storecomplain(Request $request)
+    {
+         $input = $request->all();
+        return $input;
     }
 }

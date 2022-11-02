@@ -59,7 +59,22 @@
             <div id="formprocessing" name="formprocessing" style="color:green; font-style: italic;" size="250" ></div>
             <div id="error" name="error" style="color:red; font-style: italic;" size="250" ></div>
           </div>
-        <form method="POST" action="save.php" autocomplete="off">
+          @if ($message = Session::get('success'))
+            <div class="alert alert-success">
+                <strong>{{ $message }}</strong>
+            </div>
+          @endif
+
+          @if (count($errors) > 0)
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                      <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+          @endif
+        <form method="POST" action="{{url('storeservice')}}" autocomplete="off">
             @csrf
             <div class="row">
                 <div class="col-md-3 pr-1">
