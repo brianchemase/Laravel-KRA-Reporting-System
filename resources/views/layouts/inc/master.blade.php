@@ -4,12 +4,12 @@
     <!-- Required meta tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="au theme template">
-    <meta name="author" content="Hau Nguyen">
-    <meta name="keywords" content="au theme template">
+    <meta name="description" content="KRA reporting system">
+    <meta name="author" content="Brian Chemase Anikayi">
+    <meta name="keywords" content="This is a reporting system developed by Brian Anikayi to assist CSA Officers serve clients faster.">
 
     <!-- Title Page-->
-    <title>Title</title>
+    <title> @yield('title')</title>
 
     <!-- Fontfaces CSS-->
     <link href="{{ asset('assets/css/font-face.css') }}" rel="stylesheet" media="all">

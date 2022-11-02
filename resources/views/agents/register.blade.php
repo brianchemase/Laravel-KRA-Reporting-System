@@ -62,6 +62,7 @@
           @if ($message = Session::get('success'))
             <div class="alert alert-success">
                 <strong>{{ $message }}</strong>
+                
             </div>
           @endif
 
@@ -197,5 +198,11 @@
             </section>
 
 </div>
+<script>
+    @if($message = Session::get('success'))
+    
+    swal("{{ $message }}");
+    @endif
+    </script>
 
 @endsection

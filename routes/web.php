@@ -18,6 +18,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/login-agent', [ServiceController::class, 'login']);
+
+
+
+
 Route::get('/dash', [ServiceController::class, 'index']);
 Route::get('/registerservice', [ServiceController::class, 'service']);
 Route::post('/storeservice', [ServiceController::class, 'storeservice']);
