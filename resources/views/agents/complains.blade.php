@@ -59,7 +59,7 @@
             <div id="formprocessing" name="formprocessing" style="color:green; font-style: italic;" size="250" ></div>
             <div id="error" name="error" style="color:red; font-style: italic;" size="250" ></div>
           </div>
-        <form method="POST" action="save.php" autocomplete="off">
+          <form method="POST" action="save_complain.php" autocomplete="off">
             @csrf
             <div class="row">
                 <div class="col-md-3 pr-1">
@@ -67,10 +67,10 @@
                     <div class="form-group">
                         <label>Taxpayer Pin</label>
                        
-                        <input type="hidden" name="officer" value="{{$username}}">
+                        <input type="hidden" name="officer" value="<?php echo $username;?>">
                         <input type="hidden" name="region" value="North Rift">
-                        <input type="hidden" name="station" value="{{$station}}">
-                        <input type="hidden" name="phoneupdate" value="no">
+                        <input type="hidden" name="station" value="<?php echo $station;?>">
+                        <input type="hidden" name="date" value="<?php date_default_timezone_set('Africa/Nairobi'); echo $date = date('Y-m-d h:i:s');;?>">
                         <input type="hidden" name="emailchange" value="no">
                         <input type="hidden" name="workstation" value="Nandi Huduma Centre">
                         <input type="text" onkeyup="this.value = this.value.toUpperCase();" name="pin"
@@ -79,87 +79,35 @@
                 </div>
                 <div class="col-md-3 pr-1">
                     <div class="form-group">
-                        <label>Taxpayer Name</label>
+                        <label>Complainant</label>
                         <input type="text" onkeyup="this.value = this.value.toUpperCase();" name="taxpayername"
                             class="form-control" id="taxpayername" placeholder="Enter Taxpayer Names" required>
                     </div>
                 </div>
                 <div class="col-md-3 pr-1">
                     <div class="form-group">
-                        <label>Taxpayer's Telephone</label>
-                        <input type="text" name="phone" onkeyup="this.value = this.value.toUpperCase();"
-                            class="form-control" id="phone" placeholder="Enter Taxpayer Mobile number" required>
+                        <label>Task No</label>
+                        <input type="text" onkeyup="this.value = this.value.toUpperCase();" name="taskno"
+                            class="form-control" placeholder="Enter Task Number" maxlength='15' required>
                     </div>
                 </div>
                 <div class="col-md-3 pr-1">
                     <div class="form-group">
-                        <label>Taxpayer's Email</label>
-                        <input type="text" name="email" onkeyup="this.value = this.value.toUpperCase();"
-                            class="form-control" id="email" placeholder="Enter Taxpayer Email" required>
+                        <label>Complain Registered By</label>
+                        <input type="text" onkeyup="this.value = this.value.toUpperCase();"
+                            class="form-control" id="officer" placeholder="Enter Officer Names" value="<?php echo $username;?>" readonly>
+                    </div>
+                </div>
+                <div class="col-md-8 pr-1">
+                    <div class="form-group">
+                        <label>Task</label>
+                        <textarea class="form-control" id="task" name="task" rows="4" cols="150" placeholder="Enter Taxpayer Email" required></textarea>
+                       
                     </div>
                 </div>
                 <br>
-                <!--<div class="col-md-2 pr-1">
-                    <div class="form-group">
-                        <label>Changed Phone</label>
-                        <select name="phoneupdate" id="phoneupdate" class="form-control">
-                            <option value="no">No</option>
-                            <option value="yes">Yes</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-md-2 pr-1">
-                    <div class="form-group">
-                        <label>Changed Email</label>
-                        <select name="emailchange" id="emailchange" class="form-control">
-                            <option value="no">No</option>
-                            <option value="yes">Yes</option>
-                        </select>
-                    </div>
-                </div>-->
+               
 
-                <div class="col-md-4 pr-1">
-                    <div class="form-group">
-                        <label>Resolved</label>
-                        <select name="resolved" id="resolved" class="form-control">
-                            <option value="yes">Yes</option>
-                            <option value="no">No</option>
-
-                        </select>
-                    </div>
-                </div>
-                <div class="col-md-4 pl-1">
-                    <div class="form-group">
-                        <label>Service Category</label>
-                        <select name="options" id="options" class="form-control" required>
-                            <option value="" disabled selected>Select a service</option>
-							<option value="Registration">	DTD PIN REGISTRATION</option>
-							<option value="Amendment">		DTD PIN AMENDMENT</option>
-							<option value="Updates">		DTD iPAGE UPDATE</option>
-							<option value="Filing">			DTD FILING</option>
-							<option value="Payment">		DTD PAYMENT</option>
-							<option value="TCC">			DTD TCC</option>
-							<option value="Enqueries">		DTD GENERAL ENQUIRIES</option>
-							<option value="Tickets">		DTD OS TICKETS</option>
-							<option value="Documenting">	DTD DOCUMENT DELIVERY</option>
-							<option value="Password">		DTD PASSWORD</option>
-							<option value="Others">			DTD OTHER SERVICES</option>
-							<option value="Customs">		CUSTOMS</option>
-                        </select>
-
-
-                    </div>
-                </div>
-                <div class="col-md-4 pl-1">
-                    <div class="form-group">
-                        <label>Specific Service</label>
-                        <select name="choices" id="choices"  class="form-control" required>
-                            <option value="" disabled selected>Please select a service</option>
-						</select>
-
-
-                    </div>
-                </div>
             </div>
 
 

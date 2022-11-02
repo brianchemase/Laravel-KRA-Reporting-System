@@ -28,4 +28,25 @@ class ServiceController extends Controller
 
         return view('agents.dashboard', compact('username','dept','station','tally','jana','weekly','thismonth','lastmonth','yearly'));
     }
+    public function service()
+    {
+        $username="Brian Chemase Anikayi";
+        $dept="Marketing And Communication";
+        $station="Eldoret TSO";
+
+
+
+        return view('agents.register', compact('username','dept','station'));
+    }
+
+    public function complaints()
+    {
+        $username="Brian Chemase Anikayi";
+        $dept="Marketing And Communication";
+        $station="Eldoret TSO";
+
+
+
+        return view('agents.complains', compact('username','dept','station'));
+    }
 }

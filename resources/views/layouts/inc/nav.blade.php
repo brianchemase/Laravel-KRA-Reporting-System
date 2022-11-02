@@ -21,14 +21,14 @@
                              <span class="bot-line"></span>Services</a>
                         <ul class="header3-sub-list list-unstyled">
                             <li>
-                                <a href="report.php">Register Service</a>
+                                <a href="/registerservice">Register Service</a>
                             </li>
                             <li>
                                 <a href="escalation.php">Escalations</a>
                             </li>
                             </li>
                             <li>
-                                <a href="complain.php">Complants</a>
+                                <a href="/complainstab">Complants</a>
                             </li>
                             <li>
                                 <a href="payment.php">Instant Payment</a>
