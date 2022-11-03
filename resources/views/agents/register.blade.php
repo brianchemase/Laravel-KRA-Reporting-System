@@ -62,6 +62,7 @@
           @if ($message = Session::get('success'))
             <div class="alert alert-success">
                 <strong>{{ $message }}</strong>
+                <script> swal("No Entry Fount!", "Invalid pin!", "error");</script>
                 
             </div>
           @endif
