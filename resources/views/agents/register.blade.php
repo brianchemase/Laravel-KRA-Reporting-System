@@ -116,25 +116,7 @@
                     </div>
                 </div>
                 <br>
-                <!--<div class="col-md-2 pr-1">
-                    <div class="form-group">
-                        <label>Changed Phone</label>
-                        <select name="phoneupdate" id="phoneupdate" class="form-control">
-                            <option value="no">No</option>
-                            <option value="yes">Yes</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-md-2 pr-1">
-                    <div class="form-group">
-                        <label>Changed Email</label>
-                        <select name="emailchange" id="emailchange" class="form-control">
-                            <option value="no">No</option>
-                            <option value="yes">Yes</option>
-                        </select>
-                    </div>
-                </div>-->
-
+               
                 <div class="col-md-4 pr-1">
                     <div class="form-group">
                         <label>Resolved</label>
@@ -199,11 +181,6 @@
             </section>
 
 </div>
-<script>
-    @if($message = Session::get('success'))
-    
-    swal("{{ $message }}");
-    @endif
-    </script>
+
 
 @endsection

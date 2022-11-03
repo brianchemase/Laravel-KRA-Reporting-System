@@ -74,7 +74,7 @@
                 </ul>
             </div>
           @endif
-          <form method="POST" action="{{url('storeservice')}}" autocomplete="off">
+          <form method="POST" action="{{url('storecomplain')}}" autocomplete="off">
             @csrf
             <div class="row">
                 <div class="col-md-3 pr-1">

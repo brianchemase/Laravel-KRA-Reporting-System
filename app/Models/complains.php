@@ -9,4 +9,5 @@ class complains extends Model
 {
     use HasFactory;
     protected $table = 'tbl_complains'; 
+    public $timestamps = false;
 }
