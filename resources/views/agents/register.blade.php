@@ -1,6 +1,6 @@
 @extends('layouts.inc.master')
 
-@section('title','Dashboard')
+@section('title','KRA Reporting System')
 
 @section('content')
 <!-- PAGE CONTENT-->
